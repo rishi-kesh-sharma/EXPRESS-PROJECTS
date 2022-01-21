@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://kit.fontawesome.com/7fb2d5bac5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">user management system</a>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <!-- main site -->
+        <main class="site-main">
+            <div class="container">
+                <div class="box-nav d-flex-justify-between">
+                    <a href="/add-user" class="border-shadow"><span>new user <i class="fas fa-user"></i></span></a>
+                </div>
+            </div>
+       
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>name</th>
+                            <th>@email</th>
+                            <th>gender</th>
+                            <th>status</th>
+                            <th>action</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>1</td>
+                        <td>exampel@gmail.com</td>
+                        <td>example@gmail.com</td>
+                        <td>male</td>
+                        <td>Active</td>
+                        <td>
+                            <a href="#" class="btn border-shadow update">
+                                <span class="text-gradient">
+                                    <i class="fas fa-pencil-alt">
+
+                                    </i>
+                                </span>
+                            </a>
+                            <a href="#" class="btn border-shadow delete">
+                                <span class="text-gradient">
+                                        <i class="fas fa-times"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tbody>
+                </table>
+            </form>
+        </main>
+
+        <h1>footer</h1>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://kit.fontawesome.com/7fb2d5bac5.js" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <%-include('include/_header') %>
+<main class="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="/add-user" class="border-shadow"><span>new user <i class="fas fa-user"></i></span></a>
+        </div>
+    </div>
+
+    <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>name</th>
+                    <th>@email</th>
+                    <th>gender</th>
+                    <th>status</th>
+                    <th>action</th>
+                    
+                </tr>
+            </thead>
+            <%-include('include/_show') %>
+
+          
+        </table>
+    </form>
+</main>
+<!-- include footer -->
+<%-include('include/_footer') %>
+
+</body>
+</html><!-- include header -->
+
+
+
+
+
+
+
+
+
+

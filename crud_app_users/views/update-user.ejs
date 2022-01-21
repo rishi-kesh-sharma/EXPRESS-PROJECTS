@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://kit.fontawesome.com/7fb2d5bac5.js" crossorigin="anonymous"></script>
+    <title>update user</title>
+</head>
+<body>
+
+    <!-- header -->
+        <%-include('include/_header.ejs')%>
+      
+        <!-- form content -->
+      <!-- <%-include('include/_add-user-form.ejs')%> -->
+      <form action="http://localhost:3000/api/update-user/<%=user._id%>" method="PUT" id="update_user">
+
+        <div class="new_user d-flex justify-content-center align-items-center flex-column mt-2">
+            <div class="form-group">
+                <label for="name" class="text-dark font-weight-bold">Name</label>
+                <input type="hidden" name="id" value=<%=user.name%>/>
+                <input type="text" name="name" value=<%=user.name%> placeholder="mark stoenis" />
+            </div>
+            <div class="form-group">
+                <label for="email" class="text-dark mx-auto font-weight-bold">email</label>
+                <input type="email" name="email" value=<%=user.email%> placeholder="example@gmail.com" />
+            </div>
+            <div class="form-group">
+                  <label for="gender" class="text-dark font-weight-bold" >gender</label>
+                   <div class="radio inline">
+                    <input type="radio" name="male" value='male' <%=user.gender=="male"&&'checked'%> />
+                    <label for="male" class="radio-label">male</label>
+                </div>
+                   <div class="radio inline">
+                    <input type="radio" name="female" value='female' <%=user.gender=="female"&&'checked'%> />
+                    <label for="fe" class="radio-label ">female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                  <label for="status" class="radio-label font-weight-bold" >status</label>
+                   <div class="radio inline">
+                    <input type="radio" name="status" value='active'  <%=user.status=="active"&&'checked'%>/>
+                    <label for="status" class="radio-label ">active</label>
+                </div>
+                   <div class="radio inline">
+                    <input type="radio" name="inactive" value='inactive' <%=user.status=="inactive"&&'checked'%>/>
+                    <label for="inactive" class="radio-label">inactive</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-dark px-5 text-light update ">save</button>
+            </div>
+            
+        </div>
+      </form>
+
+      <!-- footer -->
+      <%-include('include/_footer.ejs')%>
+</body>
+</html>
